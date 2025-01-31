@@ -18,10 +18,8 @@ namespace UP01._01_Nechaeva.Pages
 {
     public partial class UserAdds : Page
     {
-
         Connector connector = new Connector();
         Users CurrentUser;
-
 
         public UserAdds(Users user)
         {

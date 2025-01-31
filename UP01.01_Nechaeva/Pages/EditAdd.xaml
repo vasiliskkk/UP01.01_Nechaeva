@@ -79,8 +79,7 @@
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Right"
                 Margin="20,150,0,0"
-                DisplayMemberPath = "CityName"
-                />
+                DisplayMemberPath = "CityName"/>
 
             <ComboBox
                 x:Name="cbCategory"
@@ -91,8 +90,7 @@
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Right"
                 Margin="20,200,0,0"
-                DisplayMemberPath = "CategoryName"
-                />
+                DisplayMemberPath = "CategoryName"/>
 
             <TextBox
                 x:Name="tbName"
@@ -102,8 +100,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Right"
-                Margin="20,250,0,0"
-                />
+                Margin="20,250,0,0"/>
 
             <TextBox
                 x:Name="tbDescription"
@@ -113,8 +110,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Right"
-                Margin="20,300,0,0"
-                />
+                Margin="20,300,0,0"/>
 
             <TextBox
                 x:Name="tbPhoto"
@@ -124,8 +120,7 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 HorizontalContentAlignment="Right"
-                Margin="20,350,0,0"
-                />
+                Margin="20,350,0,0"/>
         </Grid>
 
         <Button

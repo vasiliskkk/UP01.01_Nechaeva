@@ -22,7 +22,6 @@ namespace UP01._01_Nechaeva.Pages
         Users CurrentUser;
         Advertisment CurrentAdd = null;
         Connector connector = new Connector();
-
         public EditAdd(Users User, Advertisment Add = null)
         {
             InitializeComponent();
@@ -38,7 +37,6 @@ namespace UP01._01_Nechaeva.Pages
                 btnDelete.Visibility = Visibility.Visible;
                 btnSave.Content = "Обновить";
 
-
                 cbCity.SelectedValue = CurrentAdd.City1;
                 cbCategory.SelectedValue = CurrentAdd.Category1;
                 ;
@@ -50,15 +48,13 @@ namespace UP01._01_Nechaeva.Pages
             cbCategory.ItemsSource = connector.GetCategoryList();
             cbCity.ItemsSource = connector.GetCityList();
         }
-
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
                 UpEntities.GetContext().Advertisment.Remove(CurrentAdd);
                 UpEntities.GetContext().SaveChanges();
-                MessageBox.Show("Объявление успешно удалено");
+                MessageBox.Show("Объявление успешно удалено!");
                 NavigationService.Navigate(new UserAdds(CurrentUser));
             }
             catch
@@ -66,7 +62,6 @@ namespace UP01._01_Nechaeva.Pages
                 MessageBox.Show("Произошла ошибка удаления");
             }
         }
-
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             if (
@@ -75,14 +70,11 @@ namespace UP01._01_Nechaeva.Pages
 
                 string.IsNullOrEmpty(tbName.Text) &&
                 string.IsNullOrEmpty(tbDescription.Text)
-
                 )
             {
-                MessageBox.Show("Не все поля заполнены");
-
+                MessageBox.Show("Не все поля заполнены!");
                 return;
             }
-
             if (CurrentAdd == null) CurrentAdd = new Advertisment();
 
             CurrentAdd.AdDate = DateTime.Now;
@@ -97,15 +89,14 @@ namespace UP01._01_Nechaeva.Pages
             {
                 UpEntities.GetContext().Advertisment.AddOrUpdate(CurrentAdd);
                 UpEntities.GetContext().SaveChanges();
-                MessageBox.Show("Объявление успешно добавлено/обновлено");
+                MessageBox.Show("Объявление успешно добавлено/обновлено!");
                 NavigationService.Navigate(new UserAdds(CurrentUser));
             }
             catch
             {
-                MessageBox.Show("Произошла ошибка добавления/обновления");
+                MessageBox.Show("Произошла ошибка добавления/обновления!");
             }
         }
-
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new UserAdds(CurrentUser));

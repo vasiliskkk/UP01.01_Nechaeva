@@ -28,10 +28,8 @@ namespace UP01._01_Nechaeva.Pages
             InitializeComponent();
 
             lvAdds.ItemsSource = connector.GetAddList();
-
             cbCategory.ItemsSource = connector.GetCategoryList();
             cbCity.ItemsSource = connector.GetCityList();
-
             if (user != null)
             {
                 CurrentUser = user;
@@ -55,15 +53,12 @@ namespace UP01._01_Nechaeva.Pages
         {
             int City = cbCity.SelectedIndex == -1 ? -1 : ((UP01._01_Nechaeva.API.City)cbCity.SelectedValue).Id;
             int Category = cbCategory.SelectedIndex == -1 ? -1 : ((UP01._01_Nechaeva.API.Category)cbCategory.SelectedValue).Id;
-
             string Name = string.IsNullOrEmpty(tbName.Text) ? "" : tbName.Text;
-
             lvAdds.ItemsSource = connector.GetSortedAddList(City, Category, Name);
         }
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             lvAdds.ItemsSource = connector.GetAddList();
-
             cbCategory.SelectedItem = null;
             cbCity.SelectedItem = null;
             tbName.Text = "";

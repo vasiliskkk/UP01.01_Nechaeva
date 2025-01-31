@@ -19,7 +19,6 @@ namespace UP01._01_Nechaeva.Pages
     public partial class AuthPage : Page
     {
         Connector connector = new Connector();
-
         public AuthPage()
         {
             InitializeComponent();

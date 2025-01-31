@@ -108,7 +108,6 @@
                 Margin="860,26,0,0"
                 Click="btnMyAdds_Click"/>
         </Grid>
-
         <ListView
             Grid.Row="1"
             x:Name="lvAdds"
@@ -140,8 +139,6 @@
                             Padding="0"
                             HorizontalAlignment="Center"
                             Style="{StaticResource lblLarge}"/>
-
-
                         <Grid
                             Grid.Row="1"
                             >
@@ -163,10 +160,8 @@
                                 </Image.Source>
                             </Image>
 
-                            <Grid 
-                                
-                                Grid.Column="1"
-                                >
+                            <Grid
+                                Grid.Column="1">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                     <RowDefinition/>
@@ -177,10 +172,9 @@
                                 <Label
                                     Grid.Row="0"
                                     Content="{Binding City1.CityName}"
-                                    Padding="0"
-                                    />
+                                    Padding="0"/>
                                 <TextBlock VerticalAlignment="Top" TextAlignment="Left"  Grid.Row="4" HorizontalAlignment="Stretch" FontSize="16" Text="{Binding AdDescription}"/>
-                                <TextBlock VerticalAlignment="Center" TextAlignment="Right" Width="200" Grid.Row="4" HorizontalAlignment="Left" FontSize="16" Text="{Binding AdDate }"/>
+                                <TextBlock VerticalAlignment="Center" TextAlignment="Right" Width="200" Grid.Row="4" HorizontalAlignment="Left" FontSize="16" Text="{Binding AdDate}"/>
                             </Grid>
                         </Grid>
                     </Grid>

@@ -14,9 +14,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid
-         Grid.Row="0" 
-         >
+        <Grid Grid.Row="0">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="White"/>
@@ -49,8 +47,7 @@
                 Width="200"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
-                Margin="395,0,0,0"
-                />
+                Margin="395,0,0,0"/>
 
             <Button
                 x:Name="btnReturn"
@@ -60,9 +57,7 @@
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
                 Click="btnReturn_Click"/>
-
         </Grid>
-
         <ListView
              Grid.Row="1"
              x:Name="lvAdds"
@@ -73,8 +68,7 @@
                     <WrapPanel 
                      Orientation="Horizontal" 
                      HorizontalAlignment="Center"
-                     Width="{Binding ElementName=lvAdds, Path=ActualWidth}"
-                     />
+                     Width="{Binding ElementName=lvAdds, Path=ActualWidth}"/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
@@ -83,12 +77,9 @@
                         <Border.InputBindings>
                             <MouseBinding 
                                 Gesture="LeftDoubleClick"
-                                Command="{Binding lviDoubleClick}" 
-                                />
+                                Command="{Binding lviDoubleClick}"/>
                         </Border.InputBindings>
-
                         <Grid>
-
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="60"/>
                                 <RowDefinition Height="200*"/>
@@ -99,12 +90,10 @@
                              Content="{Binding AdName}"
                              Padding="0"
                              HorizontalAlignment="Center"
-                             Style="{StaticResource lblLarge}"
-                             />
+                             Style="{StaticResource lblLarge}"/>
 
                             <Grid
-                             Grid.Row="1"
-                             >
+                             Grid.Row="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition MinWidth="200"/>
                                     <ColumnDefinition MinWidth="150"/>
@@ -115,18 +104,13 @@
                                  Width="200"
                                  Height="200" 
                                  Stretch="Uniform"
-                                 HorizontalAlignment="Center"
-                                 >
+                                 HorizontalAlignment="Center">
                                     <Image.Source>
-                                        <Binding Path="Photo">
-
-                                        </Binding>
+                                        <Binding Path="Photo"/>
                                     </Image.Source>
                                 </Image>
 
-                                <Grid 
-                                 Grid.Column="1"
-                                 >
+                                <Grid Grid.Column="1">
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
                                         <RowDefinition/>
@@ -137,26 +121,22 @@
                                     <Label
                                      Grid.Row="0"
                                      Content="{Binding City1.CityName}"
-                                     Padding="0"
-                                     />
+                                     Padding="0"/>
 
                                     <Label
                                      Grid.Row="1"
                                      Content="{Binding Category1.CategoryName}"
-                                     Padding="0"
-                                     />
+                                     Padding="0"/>
 
                                     <Label
                                      Grid.Row="2"
                                      Content="{Binding AdType1.TypeName}"
-                                     Padding="0"
-                                     />
+                                     Padding="0"/>
 
                                     <Label
                                      Grid.Row="4"
                                      Content="{Binding Price}"
-                                     Padding="0"
-                                     />
+                                     Padding="0"/>
                                 </Grid>
                             </Grid>
                         </Grid>
