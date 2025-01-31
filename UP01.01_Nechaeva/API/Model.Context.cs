@@ -3,7 +3,6 @@
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
     public partial class UpEntities : DbContext
     {
         private static UpEntities _context;
@@ -17,12 +16,10 @@
                 _context = new UpEntities();
             return _context;
         }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
         public virtual DbSet<Advertisment> Advertisment { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<City> City { get; set; }

@@ -17,19 +17,15 @@ namespace UP01._01_Nechaeva.API
         }
 
         public List<Advertisment> GetSortedAddList(
-
             int City = -1,
             int Category = -1,
             string AdName = "",
-            //string AdDescription = "",
             Users User = null
             )
         {
 
             var Adds = UpEntities.GetContext().Advertisment.ToList();
             if (Adds == null || Adds.Count() == 0) return null;
-
-
 
             if (City > -1)
             {
